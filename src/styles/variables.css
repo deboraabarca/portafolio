@@ -1,0 +1,46 @@
+/* ==========================================================
+   VARIABLES DE DISEÑO Y TIPOGRAFÍA
+   ========================================================== */
+:root {
+  /* Tipografía */
+  --font-main: 'Space Grotesk', system-ui, -apple-system, sans-serif;
+  --fw-light: 300;
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-bold: 700;
+
+  --fs-xs: 0.75rem;   
+  --fs-sm: 0.875rem;  
+  --fs-base: 0.9375rem; 
+  --fs-md: 1rem;      
+  --fs-lg: 1.25rem;  
+
+  /* Tamaños de letra :*/
+  --fs-hero: clamp(3rem, 6.4vw, 5.75rem);
+  --fs-title: clamp(3rem, 6.4vw, 5.75rem);
+  --fs-role: clamp(1.125rem, 1.8vw, 1.625rem);
+  --fs-contact: clamp(3.5rem, 9.2vw, 8.25rem);
+
+  /* Espaciados */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 64px;
+
+  /* Medidas de layout */
+  --margin-x: clamp(20px, 4.4vw, 64px);
+  --header-top: 40px;
+  --header-height: 56px;
+
+  /* Formas */
+  --radius-pill: 999px;
+  --radius-card: 18px;
+
+  /* Animaciones */
+  --transition-fast: 200ms ease-out;
+  --transition-base: 400ms cubic-bezier(0.22, 1, 0.36, 1);
+}

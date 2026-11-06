@@ -1,0 +1,112 @@
+/* ==========================================================
+   ESTILOS BASE: reset, tipografía y utilidades globales
+   ========================================================== */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+*{
+  margin: 0;
+}
+
+html{
+  -webkit-text-size-adjust:100%;
+}
+
+body{
+  background: var(--bg);
+  color:var(--text);
+  font-family: var(--font-main);
+  font-size: var(--fs-md);
+  line-height: 1.5;
+  -webkit-font-smoothing:antialiased;
+  transition: background var(--transition-base), color var(--transition-base);
+}
+
+a{
+  color:inherit;
+  text-decoration: none;
+}
+
+button{
+  font: inherit;
+  color: inherit;
+  background: none;
+  border:0;
+  cursor:pointer;
+}
+
+ul{
+  list-style:none;
+  padding:0;
+}
+
+img,
+svg{
+  display: block;
+  max-width: 100%;;
+}
+
+/* Foco visible para quien navega con teclado */
+:focus-visible{
+  outline: 2px solid var(--accent-hover);
+  outline-offset: 3px;
+}
+
+/* ---------- Utilidades ---------- */
+.container{
+  padding-inline: var(--margin-x);
+}
+
+.visually-hidden {
+position: absolute;
+width: 1px;
+height: 1px;
+overflow: hidden;
+clip: react(0 0 0 0);
+white-space:nowrap;
+}
+
+.eyebrow{
+  display: inline-flex;
+  align-items:center;
+  gap: 10px;
+  font-size: var(--fs-sm);
+  letter-spacing:0.04em;
+  color: var(--text-muted);
+}
+
+.dot{
+  width:8px;
+  height:8px;
+  border-radius: 50px;
+  background: var(--accent);
+}
+/* Título grande de cada vista */
+.page-title{
+  margin-top: 22px;
+  font-size: var(--fs-title);
+  font-weight: var(--fw-bold);
+  letter-spacing: -0.02em;
+  line-height: 1;
+}
+/* Contenedor de cada vista */
+view{
+  flex:1;
+  padding-block: clamp(32px, 6vw, 74px) var(--space-8);
+}
+
+/* Respeta a quien prefiere menos movimiento */
+@media (prefers-reduced-motion: reduce){
+  *,
+  *::before,
+  *::after{
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;   
+  }
+}
+
+

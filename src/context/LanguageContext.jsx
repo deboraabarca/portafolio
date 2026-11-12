@@ -4,6 +4,7 @@ import {
   useContext,
   useMemo,
   useState,
+  useEffect,
 } from "react";
 import es from "../data/translations/es.js";
 import en from "../data/translations/en.js";
@@ -14,10 +15,27 @@ import en from "../data/translations/en.js";
 // Ejemplo: <h1>{t.hero.role}</h1>
 
 const dictionaries = { es, en };
+const STORAGE_KEY = "lang";
+
 const LanguageContext = createContext(null);
 
+function getInitialLanguage() {
+  try {
+    const saved = localStorage.getItem(STORAGE_KEY);
+    if (saved === "es" || saved === "en") return saved;
+  } catch {}
+  return navigator.language?.startsWith("en") ? "en" : "es";
+}
+
 export function LanguageProvider({ children }) {
-  const [lang, setLang] = useState("es");
+  const [lang, setLang] = useState(getInitialLanguage);
+
+  useEffect(() => {
+    document.documentElement.lang = lang;
+    try {
+      localStorage.setItem(STORAGE_KEY, lang);
+    } catch {}
+  }, [lang]);
 
   const toggleLanguage = useCallback(() => {
     setLang((current) => (current === "es" ? "en" : "es"));

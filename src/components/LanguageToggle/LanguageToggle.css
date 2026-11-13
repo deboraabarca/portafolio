@@ -1,0 +1,16 @@
+.lang-toggle {
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-medium);
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+
+.lang-toggle .is-active {
+  color: var(--text);
+  font-weight: var(--fw-bold);
+}
+
+.lang-toggle:hover{
+  color: var(--text);
+}

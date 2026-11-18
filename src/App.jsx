@@ -6,7 +6,7 @@ export default function App() {
   return (
     <div className="container" style={{ paddingTop: 40 }}>
       <LanguageToggle />
-      <h1>{t.hero.rol}</h1>
+      <h1>{t.hero.role}</h1>
     </div>
   );
 }

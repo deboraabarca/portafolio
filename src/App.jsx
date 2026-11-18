@@ -1,3 +1,12 @@
+import LanguageToggle from "./components/LanguageToggle/LanguageTogle.jsx";
+import { useLanguage } from "./context/LanguageContext.jsx";
 export default function App() {
-  return <h1>Portafolio en construcción</h1>
+  const { t } = useLanguage();
+
+  return (
+    <div className="container" style={{ paddingTop: 40 }}>
+      <LanguageToggle />
+      <h1>{t.hero.rol}</h1>
+    </div>
+  );
 }

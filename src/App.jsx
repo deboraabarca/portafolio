@@ -1,4 +1,4 @@
-import LanguageToggle from "./components/LanguageToggle/LanguageTogle.jsx";
+import LanguageToggle from "./components/LanguageToggle/LanguageToggle.jsx";
 import { useLanguage } from "./context/LanguageContext.jsx";
 export default function App() {
   const { t } = useLanguage();

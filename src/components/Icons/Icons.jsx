@@ -1,6 +1,6 @@
 /*ICONOS SVG , con currentColor: toman el color del tema que se elije */
 
-function Svg({ size = 20, strikewidth = 1.7, children, ...props }) {
+function Svg({ size = 20, strokeWidth = 1.7, children, ...props }) {
   return (
     <svg
       width={size}

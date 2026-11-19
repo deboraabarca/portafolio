@@ -1,6 +1,7 @@
 import { useLanguage } from "../../context/LanguageContext.jsx";
 import { useTheme } from "../../context/ThemeContext.jsx";
 import { MoonIcon, SunIcon } from "../Icons/Icons.jsx";
+import "./ThemeToggle.css";
 
 // Muestra el icono del tema ACTUAL
 export default function ThemeToggle() {

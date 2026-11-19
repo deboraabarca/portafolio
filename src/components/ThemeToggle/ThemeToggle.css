@@ -1,0 +1,14 @@
+.theme-toggle{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
+  border-radius:50%;
+  color:var(--text);
+  transition: color var(--transition-fast), transform var(--transition-fast);
+}
+
+.theme-toggle:hover{
+  color: var(--accent-hover);
+  transform: rotate(15deg);
+}

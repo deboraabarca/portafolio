@@ -1,0 +1,56 @@
+.btn{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  border-radius: var(--radius-pill);
+  font-weight: var(--fw-medium);
+  white-space: nowrap;
+  transition: 
+    background var(--transition-fast),
+    color var(--transition-fast),
+    border-color var(--transition-fast),
+    transform var(--transition-fast);
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+}
+
+
+/* Tamaños */
+.btn--md{
+  padding: 14px 26px;
+  font-size: var(--fs-base);
+}
+
+.btn--lg{
+  padding: 16px 30px;
+  font-size: var(--fs-md);
+}
+
+/* Variantes */
+.btn--primary{
+  background: var(--accent);
+  color: var(--on-accent);
+}
+
+.btn--primary:hover {
+  background: var(--accent-hover);
+}
+
+.btn--outline{
+  box-shadow: inset 0 0 0 1.5px var(--text);
+  color: var(--text);
+}
+
+.btn--outline:hover {
+  background: var(--text);
+  color: var(--text);
+}
+
+.btn--inverse{
+  background: var(--text);
+  color: var(--bg);
+}
+

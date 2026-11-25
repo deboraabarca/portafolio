@@ -1,26 +1,30 @@
-import Button from "./components/Button/Button.jsx";
-import ThemeToggle from "./components/ThemeToggle/ThemeToggle.jsx";
-import LanguageToggle from "./components/LanguageToggle/LanguageToggle.jsx";
-import { useLanguage } from "./context/LanguageContext.jsx";
-export default function App() {
-  const { t } = useLanguage();
+import { Navigate, Route, Routes } from "react-router-dom";
+import Layout from "./components/Layout/Layout.jsx";
+import { views } from "./data/views.js";
 
+// Vista temporal: se irá reemplazando por la vista real en cada commit.
+function Placeholder({ name }) {
   return (
-    <div className="container" style={{ paddingTop: 40 }}>
-      <div style={{ display: "flex", gap: 22, alignItems: "center" }}>
-        <LanguageToggle />
-        <ThemeToggle />
-      </div>
-      <h1>{t.hero.role}</h1>
-      <div style={{ display: "flex", gap: 14, marginTop: 24 }}>
-        <Button size="lg"> {t.hero.viewProjects}</Button>
-        <Button size="lg" variant="outline">
-          {t.hero.downloadCv}
-        </Button>
-        <Button size="lg" variant="inverse">
-          {t.nav.contact}
-        </Button>
-      </div>
-    </div>
+    <section className="view container">
+      <h1 className="page-title">{name}</h1>
+    </section>
+  );
+}
+
+export default function App() {
+  return (
+    <Layout>
+      <Routes>
+        {views.map((view) => (
+          <Route
+            key={view.id}
+            path={view.path}
+            element={<Placeholder name={view.id} />}
+          />
+        ))}
+        {/* Cualquier ruta desconocida vuelve al inicio */}
+        <Route path="*" element={<Navigate to="/" replace />} />
+      </Routes>
+    </Layout>
   );
 }

@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { useLanguage } from "../../context/LanguageContext";
+import "./Logo.css";
 
 export default function Logo() {
   const { t } = useLanguage();

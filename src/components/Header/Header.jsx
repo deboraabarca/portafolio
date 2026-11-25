@@ -5,6 +5,7 @@ import LanguageToggle from "../LanguageToggle/LanguageToggle.jsx";
 import Logo from "../Logo/Logo.jsx";
 import NavPill from "../NavPill/NavPill.jsx";
 import ThemeToggle from "../ThemeToggle/ThemeToggle.jsx";
+import "./Header.css";
 
 export default function Header() {
   const { t } = useLanguage();

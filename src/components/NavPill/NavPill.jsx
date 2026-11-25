@@ -1,6 +1,7 @@
 import { NavLink } from "react-router-dom";
 import { useLanguage } from "../../context/LanguageContext.jsx";
 import { views } from "../../data/views.js";
+import "./NavPill.css";
 
 //NavLink marca solo la vista activa.
 export default function NavPill() {

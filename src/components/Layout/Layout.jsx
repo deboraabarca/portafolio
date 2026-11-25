@@ -1,4 +1,5 @@
 import Header from "../Header/Header.jsx";
+import "./Layout.css";
 
 export default function Layout({ children }) {
   return (

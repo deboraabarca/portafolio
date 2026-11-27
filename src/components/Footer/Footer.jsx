@@ -3,6 +3,7 @@ import { useLanguage } from "../../context/LanguageContext.jsx";
 import { views } from "../../data/views.js";
 import { profile } from "../../data/profile.js";
 import { socialIcons } from "../Icons/Icons.jsx";
+import "./Footer.css";
 
 const pad = (n) => String(n).padStart(2, "0");
 

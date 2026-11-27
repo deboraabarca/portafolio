@@ -1,4 +1,5 @@
 import Header from "../Header/Header.jsx";
+import Header from "../Header/Header.jsx";
 import "./Layout.css";
 
 export default function Layout({ children }) {
@@ -6,6 +7,7 @@ export default function Layout({ children }) {
     <div className="layout">
       <Header />
       <main className="layout__main">{children}</main>
+      <Footer />
     </div>
   );
 }

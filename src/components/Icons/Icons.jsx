@@ -48,20 +48,20 @@ export const LinkedinIcon = (props) => (
   </Svg>
 );
 
-export const InstagramIcon = (props) => {
+export const InstagramIcon = (props) => (
   <Svg {...props}>
     <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
     <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
     <path d="M17.5 6.5h.01" />
-  </Svg>;
-};
+  </Svg>
+);
 
-export const ArrowUpRightIcon = (props) => {
+export const ArrowUpRightIcon = (props) => (
   <Svg {...props}>
     <path d="M7 7h10v10" />
     <path d="M7 17 17 7" />
-  </Svg>;
-};
+  </Svg>
+);
 
 export const MenuIcon = (props) => (
   <Svg {...props}>
